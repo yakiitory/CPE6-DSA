@@ -8,18 +8,19 @@ from adt import LinkedList
 
 def main():
     sllist = LinkedList(1871)
-    sllist.insert_after(1871, 1917)
-    sllist.insert_after(1917, 1945)
+    try:
+        sllist.insert_after(1871, 1917)
+        sllist.insert_after(1917, 1945)
+    except False:
+        raise AttributeError("Nonexistent insertion position")
 
     list = sllist.to_list()
-    str_list = [str(x) for x in list]
-    print(f"Initial list: {", ".join(str_list)}")
+    print(f"Initial list: {", ".join(list)}")
 
     # Insert a new number in between
     sllist.insert_after(1917, 1941)
     new_list = sllist.to_list()
-    new_str_list = [str(x) for x in new_list]
-    print(f"Mutated list: {", ".join(new_str_list)}")
+    print(f"Mutated list: {", ".join(new_list)}")
 
 if __name__ == "__main__":
     main()

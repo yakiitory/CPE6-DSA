@@ -18,9 +18,8 @@ def main():
 
     for i in range(queue.get_len()):
         print(queue.queue[i], end=" ")
-    print()
 
-    print(f"{queue.dequeue()} has exited the queue!")
+    print(f"\n{queue.dequeue()} has exited the queue!")
 
     print("New queue: ", end="")
     for i in range(queue.get_len()):

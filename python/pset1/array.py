@@ -10,20 +10,17 @@
 def main():
     students = ["Harry", "Hermione", "Ron", "Neville", "Draco"]
     print("Before update:")
-    for student in students:
-        print(student)
-    
+    print(*students, sep=", ")
+
     # Inserts onto array and prints
     students.append("Luna")
     print("After insertion: ")
-    for student in students:
-        print(student)
+    print(*students, sep=", ")
 
     # Removes a student
     students.remove("Draco")
     print("After deletion: ")
-    for student in students:
-        print(student)
+    print(*students, sep=", ")
 
 if __name__ == "__main__":
     main()

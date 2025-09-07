@@ -18,10 +18,12 @@ def main():
 
     bfs_list = []
     bfs(friendship_graph, "Steven", bfs_list)
+    print("Breadth First Search: ", end="")
     print(*bfs_list, sep=", ")
 
     dfs_list = []
     dfs(friendship_graph, "Steven", dfs_list)
+    print("Depth First Search: ", end="")
     print(*dfs_list, sep=", ")
 
 def bfs(graph:dict, start:str, l:list):
