@@ -7,6 +7,9 @@ class Node:
         self.value = value
         self.next = None
 
+    def __str__(self) -> str:
+        return f"node.value = {self.value}; node.next = {self.next}\n"
+
 class BinaryNode:
     def __init__(self, value):
         self.value = value
